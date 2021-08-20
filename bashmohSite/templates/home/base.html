@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<!-- {% load bootstrap5 %} -->
+<!-- {% bootstrap_css %} -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+
+  <link rel="stylesheet" href="{% static 'css/home/css/bootstrap.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+  <title>BASHMOH HOMES</title>
+</head>
+<body id="home" data-bs-spy="scroll" data-bs-target="#main-nav">
+  <nav id="main-nav" class="navbar navbar-expand-md navbar-light fixed-top py-4">
+    <div class="container">
+      <a href="{% url 'home:index' %}" class="navbar-brand">
+        <img class="rounded-circle" src="{% static 'img/logo.jpg' %}" width="50" height="50" mt-5 pt-5 alt="">
+        <h3 class="d-inline align-middle">BASHMOH HOMES</h3>
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav">
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link text-danger" href="{% url 'customer:detail' user.userprofileinfo.phone_number %}">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              </li>
+          {% else %}
+          <li class="nav-item">
+            <a href="{% url 'customer:user_login' %}" class="text-dark btn btn-info nav-link">Customer</a>
+          </li>
+          {% endif %}
+
+          <!-- <li class="nav-item">
+            <a href="{% url 'customer:user_login' %}" class="text-dark btn btn-info nav-link">Customer</a>
+          </li> -->
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="{% url 'home:index' %}" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'home:products'%}" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- showcase -->
+
+  {% block content %}
+
+  {% endblock %}
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+  <script>
+    // <!-- Get the current year for the copy right -->
+    $('#year').text(new Date().getFullYear());
+  </script>
+</body>
+</html>

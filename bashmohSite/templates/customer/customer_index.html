@@ -1,0 +1,27 @@
+{% extends 'customer/base.html' %}
+{% load static %}
+  {% block content %}
+  <div data-bs-spy="scroll" data-bs-target="#main-nav">
+    <section id="showcase" class="py-5">
+      <div class="primary-overlay text-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 text-center">
+              <h1 class="display-2 mt-5 pt-5">
+                Real Estate Professionals...
+              </h1>
+              <hr style="width:100%;height:5px;color:#fff">
+              <p class="lead">Some say real estate isn't for everyone, at <strong style="color:red">BASHMOH HOMES </strong> we believe everyone should own a piece of real estate.</p>
+              <a href="{% url 'home:products'%}" class="btn btn-outline-secondary btn-lg text-white">
+                <i class="fas fa-arrow-right mx-1"></i> Read More
+              </a>
+            </div>
+            <div class="col-lg-5">
+              <img src="{% static 'img/delivering1.jpg'%}" alt="" width="250" height="250" class="img-fluid d-none d-lg-block ml-5 py-5 align-self-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  {% endblock %}

@@ -1,0 +1,360 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<!-- showcase -->
+<div data-bs-spy="scroll" data-bs-target="#main-nav">
+  <section id="showcase" class="py-5">
+    <div class="primary-overlay text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 text-center">
+            <h1 class="display-2 mt-5 pt-5">
+              Real Estate Professionals...
+            </h1>
+            <hr style="width:100%;height:5px;color:#fff">
+            <p class="lead">Some say real estate isn't for everyone, at <strong style="color:red">BASHMOH HOMES </strong> we believe everyone should own a piece of real estate.</p>
+            <a href="{% url 'home:products'%}" class="btn btn-outline-secondary btn-lg text-white">
+              <i class="fas fa-arrow-right mx-1"></i> Read More
+            </a>
+          </div>
+          <div class="col-lg-5">
+            <img src="{% static 'img/delivering1.jpg'%}" alt="" width="250" height="250" class="img-fluid d-none d-lg-block ml-5 py-5 align-self-center">
+            <!-- <img src="{% static 'img/delivering1.png'%}" alt="" width="250" height="250" class="img-fluid d-none d-lg-block ml-5 py-5 align-self-center"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+
+  <section id="newsletter" class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <input type="text" class="form-control form-control-lg mb-2" placeholder="Enter Name">
+        </div>
+        <div class="col-md-4">
+          <input type="email" class="form-control form-control-lg mb-2" placeholder="Enter Email">
+        </div>
+        <div class="col-md-4 d-grid gap-2">
+          <button class="btn btn-info btn-lg">
+            <i class="fas fa-envelope-open-text"></i> Subcribe
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOXES -->
+  <section id="boxes" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card text-center border-info mb-2">
+            <div class="card-body">
+              <h3 class="text-info">Be Better</h3>
+              <p class="text-muted">One of the best ways to add real value to your life is to own a property. Do you own a property?</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center bg-info text-white border-info mb-2">
+            <div class="card-body">
+              <h3>Be Smarter</h3>
+              <p>Smart Investors think long term, smart investors diversify their portfolio, smart investors choose real Estate</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center border-info mb-2">
+            <div class="card-body">
+              <h3 class="text-info">Be Faster</h3>
+              <p class="text-muted">Goal getters don't wait or waste time being indesicive, they make moves, fast moves to secure their future.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center bg-info text-white border-info mb-2">
+            <div class="card-body">
+              <h3>Be Stronger</h3>
+              <p>The strength of a man is not just the ability to make money, but also the ability to make informed decisions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section id="about" class="py-5 text-center bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="info-header mb-5">
+            <h1 class="text-info pb-3">
+              Why Bashmoh?
+            </h1>
+            <p class="lead pb-3">We offer premium products and have a good track record with thousands of satisfied customers both within and outside Nigeria.</p>
+          </div>
+          <!-- accordian -->
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header bg-success text-white">
+                <h5 class="mb-0">
+                  <div href="#collapse1" data-bs-toggle="collapse" data-bs-parent="#accordion">
+                    <i class="fas fa-arrow-circle-down"></i> Get Inspired
+                  </div>
+                </h5>
+              </div>
+              <div id="collapse1" class="collapse">
+                <div class="card-body">
+                  Agriculture is fast becoming the leading source of income accross Africa. Food business is big business, not just the finished products you see on the top of shelves and eatries,
+                  but the entire agricultural food chain: from crop production to value adding to logistics. If you are looking to diversify your investment portfolio or looking to explore other business ventures,
+                  Farming is a very lucrative business.
+                  Contact us today for affordable, fertile land to grow all your agricultural produce.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <div href="#collapse2" data-bs-toggle="collapse" data-bs-parent="#accordion">
+                    <i class="fas fa-arrow-circle-down"></i> Gain The Knowledge
+                  </div>
+                </h5>
+              </div>
+              <div id="collapse2" class="collapse">
+                <div class="card-body">
+                  There are a wide variety of reasons why you should consider owning real estate. Buying a plot of land does not neccessarily mean you want to build a house. There are
+                  other things you can do <em>eg</em> investment purposes; Although due to the low risk(<strong>YES ZERO TO NO RISK!!!</strong>) associated with real estate the rate at which your investment will increase may seem slow at first, but
+                  slow and steady is better than losing all your money due to the recklessness and greed of some investment banker you never met before.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header bg-danger text-white">
+                <h5 class="mb-0">
+                  <div href="#collapse3" data-bs-toggle="collapse" data-bs-parent="#accordion">
+                    <i class="fas fa-arrow-circle-down"></i> Open Your Mind
+                  </div>
+                </h5>
+              </div>
+              <div id="collapse3" class="collapse show">
+                <div class="card-body">
+                  The real value of real estate e.g "A Plot Of Land" is more than the actual price you paid for the land. When buying real estate be it a land, a house or an apartment, what's most important is the future value of the property.
+                  Secondly real estate offer you stable risk free investment. The value of the property is guaranteed to increase over time.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- authors -->
+  <section id="authors" class="my-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="info-header mb-5">
+            <h1 class="text-info pb-3">
+              Our Products And Services
+            </h1>
+            <h1 class="lead mb-5">We offer premium products ranging from residential land in choice locations, farm land for small and large scale agricultre,
+              carcass biulding with flexible payment plans as well as property documentation.
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="{% static 'img/lag2.jpeg'%}" alt="" class="img-fluid rounded-circle w-50">
+              <h3>Documentation</h3>
+              <h5 class="text-muted">Propety Documentation</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Deed of Assignment</li>
+                <li class="list-group-item">Registered Survey</li>
+                <li class="list-group-item">Dry Land</li>
+              </ul>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="#">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="{% static 'img/lagos4.jpeg'%}" alt="" class="img-fluid rounded-circle w-50">
+              <h3>Estate Lands</h3>
+              <h5 class="text-muted">Residential</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Deed of Assignment</li>
+                <li class="list-group-item">Registered Survey</li>
+                <li class="list-group-item">Dry Land</li>
+              </ul>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="#">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="{% static 'img/lagos3.jpeg'%}" alt="" class="img-fluid rounded-circle w-50">
+              <h3>Farm Land</h3>
+              <h5 class="text-muted">Agricultural</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Deed of Assignment</li>
+                <li class="list-group-item">Registered Survey</li>
+                <li class="list-group-item">Dry Land</li>
+              </ul>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="#">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="{% static 'img/la.jpeg'%}" alt="" class="img-fluid rounded-circle w-50">
+              <h3>Building</h3>
+              <h5 class="text-muted">Carcass</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Deed of Assignment</li>
+                <li class="list-group-item">Registered Survey</li>
+                <li class="list-group-item">Dry Land</li>
+              </ul>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="#">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <h3>Contact Us</h3>
+          <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, similique.</p> -->
+          <form action="">
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+              <input type="Email" class="form-control" placeholder="Email">
+            </div>
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-pencil-alt"></i>
+                </span>
+              </div>
+              <textarea class="form-control"  name="name" rows="8" cols="80" placeholder="Type Message..."></textarea>
+            </div>
+            <div class="d-grid gap-2">
+              <input type="submit" value="Submit" class="btn btn-info btn-block btn-lg">
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-3 align-self-center">
+          <img src="{% static 'img/logo.jpg' %}" alt="" class="img-fluid rounded-circle">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="mainfooter" class="py-5 bg-info text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-6 ms-auto">
+          <p class="lead">
+            Copyright &copy; <span id="year"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+
+{% endblock %}

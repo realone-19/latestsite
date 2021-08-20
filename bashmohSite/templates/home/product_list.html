@@ -1,0 +1,79 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    {% for product in product_list %}
+    <div id="authors" class="col-lg-3 col-md-6 mb-3 mt-5 text-center">
+      <div class="card">
+        <div class="card-body">
+          {% if product.category == 'Farm Land'%}
+            <img src="{% static 'img/farm.png'%}" alt="" class="img-fluid rounded-circle w-50 mb-3">
+          {% elif product.category == 'Residential' %}
+            <img src="{% static 'img/la.jpeg'%}" alt="" class="img-fluid rounded-circle w-50 mb-3">
+          {% else %}
+            <img src="{% static 'img/carcass.jpeg'%}" alt="" class="img-fluid rounded-circle w-50 mb-3">
+          {% endif %}
+          <h3 class="text-center">{{ product.name }}</h3>
+          <h5 class="text-muted text-center">{{ product.category }}</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Deed of Assignment</li>
+            <li class="list-group-item">Registered Survey</li>
+            <li class="list-group-item">Dry Land</li>
+            <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Subcribe Now
+            </button>
+            <!-- <li class="list-group-item">A fourth item</li> -->
+            <!-- <li class="list-group-item">And a fifth one</li> -->
+          </ul>
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati velit, voluptates, tempora quibusdam natus rerum.</p> -->
+          <div class="d-flex justify-content-center">
+            <div class="p-4">
+              <a href="#">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+            <div class="p-4">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+            <div class="p-4">
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registration Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{% url 'home:registration' %}" method="post">
+          {% csrf_token %}
+          <!-- {{ form }} -->
+          {% bootstrap_form form %}
+          <input class="btn btn-success" type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
